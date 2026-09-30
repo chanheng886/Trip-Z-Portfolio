@@ -9,7 +9,7 @@ export default function DownloadSection({ onDownloadApk, onDownloadIpa, onOpenGu
   const [copiedSha, setCopiedSha] = useState('');
 
   const apkSha = "0822c1d8081b530e57d46c652fbf45d661ddd087969c54c598443f39fbd13ba3";
-  const ipaSha = "365b7965847d3f0e9cc65b4714503c55757139f5aea5461d574caaf0f69d9f0a";
+  const ipaSha = "6432dd28c6a8b97d46a4f06423117b5ff6dcdefb45952e0437f8ecdee5bca807";
 
   const handleCopy = (type, sha) => {
     navigator.clipboard.writeText(sha);
@@ -25,7 +25,7 @@ export default function DownloadSection({ onDownloadApk, onDownloadIpa, onOpenGu
         <div className="max-w-3xl mx-auto text-center space-y-3 mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--green-surface)] border border-[var(--green-border)] text-[#19D66B] text-xs font-bold uppercase tracking-wider">
             <Download className="w-3.5 h-3.5" />
-            Client Distributions
+            Client Access & Downloads
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[var(--text-primary)] tracking-tight">
@@ -33,14 +33,14 @@ export default function DownloadSection({ onDownloadApk, onDownloadIpa, onOpenGu
           </h2>
 
           <p className="text-base text-[var(--text-secondary)]">
-            The complete TripZ experience is available through our mobile and web applications.
+            Experience TripZ across Android, iOS, and the modern Web Client.
           </p>
         </div>
 
-        {/* 3 Large Cards: Android, iOS, Web */}
+        {/* 3 Focused Cards: Android, iOS, and Web Application */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
 
-          {/* Card 1: Android */}
+          {/* Card 1: Android Mobile App */}
           <div className="rounded-[28px] p-7 bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-[#19D66B]/60 transition-all duration-300 shadow-xl flex flex-col justify-between group hover:-translate-y-1">
             <div>
               <div className="flex items-center justify-between mb-6">
@@ -61,7 +61,7 @@ export default function DownloadSection({ onDownloadApk, onDownloadIpa, onOpenGu
               <div className="space-y-1.5 bg-[var(--bg-card-secondary)] p-3 rounded-xl border border-[var(--border-color)] text-xs mb-4">
                 <div className="flex justify-between text-[var(--text-secondary)]">
                   <span>Package</span>
-                  <span className="text-[var(--text-primary)] font-mono">TripZ-v1.2.0.apk</span>
+                  <span className="text-[var(--text-primary)] font-mono font-medium">TripZ-v1.2.0.apk</span>
                 </div>
                 <div className="flex justify-between text-[var(--text-secondary)]">
                   <span>Size</span>
@@ -92,36 +92,36 @@ export default function DownloadSection({ onDownloadApk, onDownloadIpa, onOpenGu
             </div>
           </div>
 
-          {/* Card 2: iOS */}
+          {/* Card 2: iOS Mobile App (Sideloadly / AltStore Ready) */}
           <div className="rounded-[28px] p-7 bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-[#19D66B]/60 transition-all duration-300 shadow-xl flex flex-col justify-between group hover:-translate-y-1">
             <div>
               <div className="flex items-center justify-between mb-6">
                 <div className="w-12 h-12 rounded-2xl bg-[var(--bg-card-secondary)] border border-[var(--border-color)] flex items-center justify-center text-[var(--text-primary)] group-hover:scale-110 transition-transform">
                   <Apple className="w-6 h-6" />
                 </div>
-                <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-[var(--bg-card-secondary)] text-[var(--text-secondary)] border border-[var(--border-color)] uppercase">
-                  iOS IPA
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-[var(--bg-card-secondary)] text-[var(--text-primary)] border border-[var(--border-color)] uppercase">
+                  iOS Mobile (.IPA)
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold text-[var(--text-primary)] mb-1.5">iOS</h3>
+              <h3 className="text-xl font-bold text-[var(--text-primary)] mb-1.5">iOS (iPhone)</h3>
               <p className="text-sm text-[var(--text-secondary)] mb-4">
-                Install the TripZ iOS application via Sideloadly, AltStore, or TestFlight.
+                Install native TripZ on your iPhone via Sideloadly or AltStore.
               </p>
 
               {/* Specs */}
               <div className="space-y-1.5 bg-[var(--bg-card-secondary)] p-3 rounded-xl border border-[var(--border-color)] text-xs mb-4">
                 <div className="flex justify-between text-[var(--text-secondary)]">
                   <span>Package</span>
-                  <span className="text-[var(--text-primary)] font-mono">TripZ-v1.2.0.ipa</span>
+                  <span className="text-[var(--text-primary)] font-mono font-medium">TripZ-v1.2.0.ipa</span>
                 </div>
                 <div className="flex justify-between text-[var(--text-secondary)]">
                   <span>Size</span>
-                  <span className="text-[var(--text-primary)] font-bold">9.1 MB</span>
+                  <span className="text-[#19D66B] font-bold">10.0 MB</span>
                 </div>
                 <div className="flex justify-between text-[var(--text-secondary)]">
                   <span>Requires</span>
-                  <span className="text-[var(--text-primary)]">iOS 15.0+</span>
+                  <span className="text-[var(--text-primary)]">iOS 15.0+ (Sideloadly)</span>
                 </div>
               </div>
             </div>
@@ -129,26 +129,26 @@ export default function DownloadSection({ onDownloadApk, onDownloadIpa, onOpenGu
             <div className="space-y-2 pt-2">
               <button
                 onClick={onDownloadIpa}
-                className="w-full py-3.5 px-4 rounded-xl bg-[var(--bg-card-secondary)] hover:bg-[var(--bg-card-elevated)] border border-[var(--border-color)] text-[var(--text-primary)] font-bold text-xs transition-all flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full py-3.5 px-4 rounded-xl bg-[var(--bg-card-secondary)] hover:bg-[var(--bg-card-elevated)] border border-[var(--border-color)] hover:border-[#19D66B]/50 text-[var(--text-primary)] font-black text-xs transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm"
               >
                 <Download className="w-4 h-4 text-[#19D66B]" />
-                <span>Download IPA</span>
+                <span>Download IPA (v1.2.0)</span>
               </button>
 
               <button
                 onClick={() => onOpenGuide('ios')}
-                className="w-full text-center text-[11px] text-[var(--text-secondary)] hover:text-[var(--text-primary)] underline transition-colors cursor-pointer"
+                className="w-full text-center text-[11px] text-[var(--text-secondary)] hover:text-[#19D66B] underline transition-colors cursor-pointer font-medium"
               >
-                iOS sideload instructions
+                How to install on iPhone (Guide) →
               </button>
             </div>
           </div>
 
-          {/* Card 3: Web */}
-          <div className="rounded-[28px] p-7 bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-[#19D66B]/60 transition-all duration-300 shadow-xl flex flex-col justify-between group hover:-translate-y-1">
+          {/* Card 3: Live Web Application */}
+          <div className="rounded-[28px] p-7 bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-[#A78BFA]/60 transition-all duration-300 shadow-xl flex flex-col justify-between group hover:-translate-y-1">
             <div>
               <div className="flex items-center justify-between mb-6">
-                <div className="w-12 h-12 rounded-2xl bg-[var(--green-surface)] border border-[var(--green-border)] flex items-center justify-center text-[#19D66B] group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-2xl bg-[#A78BFA]/10 border border-[#A78BFA]/30 flex items-center justify-center text-[#A78BFA] group-hover:scale-110 transition-transform">
                   <Globe className="w-6 h-6" />
                 </div>
                 <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-[var(--bg-card-secondary)] text-[#A78BFA] border border-[var(--border-color)] uppercase">
@@ -156,24 +156,24 @@ export default function DownloadSection({ onDownloadApk, onDownloadIpa, onOpenGu
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold text-[var(--text-primary)] mb-1.5">Web</h3>
+              <h3 className="text-xl font-bold text-[var(--text-primary)] mb-1.5">Web Client</h3>
               <p className="text-sm text-[var(--text-secondary)] mb-4">
-                Open TripZ directly in your browser with zero download needed.
+                Open TripZ directly in your browser with zero download required.
               </p>
 
               {/* Specs */}
               <div className="space-y-1.5 bg-[var(--bg-card-secondary)] p-3 rounded-xl border border-[var(--border-color)] text-xs mb-4">
                 <div className="flex justify-between text-[var(--text-secondary)]">
                   <span>Access</span>
-                  <span className="text-[var(--text-primary)]">Desktop / Laptop</span>
+                  <span className="text-[var(--text-primary)]">Any Mobile / Desktop</span>
                 </div>
                 <div className="flex justify-between text-[var(--text-secondary)]">
-                  <span>Technology</span>
-                  <span className="text-[#A78BFA] font-bold">Flutter + Spring Boots</span>
+                  <span>Installation</span>
+                  <span className="text-[#A78BFA] font-bold">Instant PWA</span>
                 </div>
                 <div className="flex justify-between text-[var(--text-secondary)]">
                   <span>Hosting</span>
-                  <span className="text-[var(--text-primary)]">Cloud Hosted</span>
+                  <span className="text-[var(--text-primary)]">Firebase CDN</span>
                 </div>
               </div>
             </div>
@@ -183,34 +183,54 @@ export default function DownloadSection({ onDownloadApk, onDownloadIpa, onOpenGu
                 href={APP_LINKS.WEB_APP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3.5 px-4 rounded-xl bg-[var(--bg-card-secondary)] hover:bg-[var(--bg-card-elevated)] border border-[var(--border-color)] hover:border-[#19D66B]/50 text-[var(--text-primary)] font-bold text-xs transition-all flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full py-3.5 px-4 rounded-xl bg-[var(--bg-card-secondary)] hover:bg-[var(--bg-card-elevated)] border border-[var(--border-color)] hover:border-[#A78BFA]/50 text-[var(--text-primary)] font-black text-xs transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm"
               >
                 <span>Open Web App</span>
-                <ExternalLink className="w-4 h-4 text-[#19D66B]" />
+                <ExternalLink className="w-4 h-4 text-[#A78BFA]" />
               </a>
 
               <p className="text-center text-[11px] text-[var(--text-muted)]">
-                External TripZ production web client
+                iPhone Safari: Share &gt; Add to Home Screen
               </p>
             </div>
           </div>
 
         </div>
 
-        {/* SHA-256 Checksum note */}
-        <div className="mt-12 p-4 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)] max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[var(--text-secondary)] shadow-sm">
+        {/* SHA-256 Checksums */}
+        <div className="mt-12 p-4 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)] max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[var(--text-secondary)] shadow-sm">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-[#19D66B]" />
-            <span>Developer signed packages • SHA-256 integrity verified</span>
+            <span>Developer signed builds • SHA-256 integrity verified</span>
           </div>
-          <a
-            href="/downloads/checksums.txt"
-            download
-            className="text-[#19D66B] hover:underline font-semibold flex items-center gap-1"
-          >
-            <FileCode className="w-3.5 h-3.5" />
-            <span>checksums.txt</span>
-          </a>
+          <div className="flex flex-wrap items-center gap-3">
+            <button
+              onClick={() => handleCopy('apk', apkSha)}
+              className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] flex items-center gap-1 font-mono text-[11px] cursor-pointer"
+              title="Click to copy APK SHA-256"
+            >
+              {copiedSha === 'apk' ? <Check className="w-3.5 h-3.5 text-[#19D66B]" /> : <Copy className="w-3.5 h-3.5" />}
+              <span>APK: {apkSha.substring(0, 10)}...</span>
+            </button>
+            <span className="text-[var(--border-color)]">|</span>
+            <button
+              onClick={() => handleCopy('ipa', ipaSha)}
+              className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] flex items-center gap-1 font-mono text-[11px] cursor-pointer"
+              title="Click to copy IPA SHA-256"
+            >
+              {copiedSha === 'ipa' ? <Check className="w-3.5 h-3.5 text-[#19D66B]" /> : <Copy className="w-3.5 h-3.5" />}
+              <span>IPA: {ipaSha.substring(0, 10)}...</span>
+            </button>
+            <span className="text-[var(--border-color)]">|</span>
+            <a
+              href="/downloads/checksums.txt"
+              download
+              className="text-[#19D66B] hover:underline font-semibold flex items-center gap-1"
+            >
+              <FileCode className="w-3.5 h-3.5" />
+              <span>checksums.txt</span>
+            </a>
+          </div>
         </div>
 
       </div>

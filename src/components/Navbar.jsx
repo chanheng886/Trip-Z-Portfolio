@@ -27,19 +27,18 @@ export default function Navbar({ isDark, onToggleTheme }) {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-[var(--nav-bg)] backdrop-blur-md border-b border-[var(--border-color)] shadow-xl py-3'
-          : 'bg-transparent py-5'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+        ? 'bg-[var(--nav-bg)] backdrop-blur-md border-b border-[var(--border-color)] shadow-xl py-3'
+        : 'bg-transparent py-5'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          
+
           {/* Brand Logo & Team Name */}
           <a href="#hero" className="flex items-center gap-3 group">
             <div className="w-10 h-10 rounded-xl bg-[#19D66B] flex items-center justify-center text-black shadow-md shadow-[#19D66B]/25 group-hover:scale-105 transition-transform duration-300">
-              <Bus className="w-5 h-5 text-black" />
+              <Bus className="w-5 h-5 text-white" />
             </div>
             <div>
               <div className="flex items-center gap-2">

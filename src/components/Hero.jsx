@@ -1,6 +1,6 @@
 import React from 'react';
 import { 
-  ArrowRight, Download, Smartphone, Apple, ExternalLink, 
+  ArrowRight, Download, Smartphone, Apple, Globe, ExternalLink, 
   MapPin, Sparkles, Navigation, ShieldCheck, Bus 
 } from 'lucide-react';
 import { APP_LINKS, PROJECT_INFO } from '../config/projectData';
@@ -83,7 +83,7 @@ export default function Hero({ onDownloadApk, onDownloadIpa }) {
 
             {/* Small Platform Release Buttons */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2 text-xs text-[var(--text-secondary)]">
-              <span className="text-[11px] font-medium uppercase tracking-wider text-[var(--text-muted)]">Packages:</span>
+              <span className="text-[11px] font-medium uppercase tracking-wider text-[var(--text-muted)]">Available:</span>
               <button
                 onClick={onDownloadApk}
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[var(--bg-card)] hover:bg-[var(--bg-card-secondary)] border border-[var(--border-color)] text-[var(--text-primary)] text-xs transition-colors cursor-pointer shadow-sm"
@@ -96,9 +96,19 @@ export default function Hero({ onDownloadApk, onDownloadIpa }) {
                 onClick={onDownloadIpa}
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[var(--bg-card)] hover:bg-[var(--bg-card-secondary)] border border-[var(--border-color)] text-[var(--text-primary)] text-xs transition-colors cursor-pointer shadow-sm"
               >
-                <Apple className="w-3.5 h-3.5 text-slate-400" />
+                <Apple className="w-3.5 h-3.5 text-slate-300" />
                 <span>iOS IPA (v1.2.0)</span>
               </button>
+
+              <a
+                href={APP_LINKS.WEB_APP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[var(--bg-card)] hover:bg-[var(--bg-card-secondary)] border border-[var(--border-color)] text-[var(--text-primary)] text-xs transition-colors cursor-pointer shadow-sm"
+              >
+                <Globe className="w-3.5 h-3.5 text-[#A78BFA]" />
+                <span>Web App (Live)</span>
+              </a>
             </div>
 
             {/* Project Quick Highlights */}
@@ -113,7 +123,7 @@ export default function Hero({ onDownloadApk, onDownloadIpa }) {
               </div>
               <div>
                 <div className="text-2xl font-black text-[#A78BFA]">3 Apps</div>
-                <p className="text-xs text-[var(--text-muted)] mt-0.5">Flutter & React Ecosystem</p>
+                <p className="text-xs text-[var(--text-muted)] mt-0.5">Android, iOS & Web</p>
               </div>
             </div>
 

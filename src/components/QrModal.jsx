@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { X, QrCode, Smartphone, Apple, Copy, Check } from 'lucide-react';
+import { X, QrCode, Smartphone, Apple, Globe, Copy, Check } from 'lucide-react';
+import { APP_LINKS } from '../config/projectData';
 
 export default function QrModal({ isOpen, onClose }) {
   const [platform, setPlatform] = useState('android');
@@ -10,7 +11,9 @@ export default function QrModal({ isOpen, onClose }) {
   const currentUrl = typeof window !== 'undefined' ? window.location.origin : 'https://tripz.app';
   const downloadLink = platform === 'android' 
     ? `${currentUrl}/downloads/TripZ-v1.2.0.apk`
-    : `${currentUrl}/downloads/TripZ-v1.2.0.ipa`;
+    : platform === 'ios'
+    ? `${currentUrl}/downloads/TripZ-v1.2.0.ipa`
+    : APP_LINKS.WEB_APP_URL;
 
   const handleCopy = () => {
     navigator.clipboard.writeText(downloadLink);
@@ -35,12 +38,12 @@ export default function QrModal({ isOpen, onClose }) {
           <QrCode className="w-6 h-6" />
         </div>
 
-        <h3 className="text-xl font-bold text-white">Scan to Download</h3>
+        <h3 className="text-xl font-bold text-white">Scan to Access</h3>
         <p className="text-xs sm:text-sm text-slate-400 mt-1 mb-5">
-          Scan with your smartphone camera to grab the package directly to your phone.
+          Scan with your smartphone camera to grab the package or open the web app.
         </p>
 
-        {/* Platform Switcher */}
+        {/* Platform Switcher: 3 Options */}
         <div className="flex p-1 bg-[#212633] rounded-xl border border-[#282e3e] mb-6">
           <button
             onClick={() => setPlatform('android')}
@@ -51,7 +54,7 @@ export default function QrModal({ isOpen, onClose }) {
             }`}
           >
             <Smartphone className="w-3.5 h-3.5" />
-            Android APK
+            Android
           </button>
           <button
             onClick={() => setPlatform('ios')}
@@ -63,6 +66,17 @@ export default function QrModal({ isOpen, onClose }) {
           >
             <Apple className="w-3.5 h-3.5" />
             iOS IPA
+          </button>
+          <button
+            onClick={() => setPlatform('web')}
+            className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+              platform === 'web'
+                ? 'bg-[#A78BFA] text-black shadow-md'
+                : 'text-slate-400 hover:text-white'
+            }`}
+          >
+            <Globe className="w-3.5 h-3.5" />
+            Web App
           </button>
         </div>
 

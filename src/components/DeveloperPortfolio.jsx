@@ -16,7 +16,7 @@ export default function DeveloperPortfolio() {
     { name: 'State & Caching', desc: 'Redux Toolkit + MMKV high-speed offline persistent storage for QR passes' },
     { name: 'Live Telemetry', desc: 'WebSockets & MQTT for low-latency GPS express bus location tracking' },
     { name: 'Payment Integrations', desc: 'Bakong KHQR, ABA Mobile Pay, ACLEDA, and Apple Pay checkout pipelines' },
-    { name: 'Build Pipeline', desc: 'Fastlane automated CI/CD compiling signed standalone APK & IPA packages' },
+    { name: 'Build Pipeline', desc: 'Fastlane automated CI/CD compiling signed standalone Android APK packages' },
     { name: 'Mapping & Routing', desc: 'Mapbox SDK with offline Cambodia road network and terminal coordinates' },
   ];
 
@@ -97,7 +97,7 @@ export default function DeveloperPortfolio() {
                 TripZ Mobility App & Infrastructure
               </h3>
               <p className="text-sm text-slate-300 leading-relaxed">
-                Engineered to demonstrate mobile development proficiency—from native Android & iOS builds to seamless Cambodian transit booking with live telemetry. Open for mobile and full-stack software development engagements.
+                Engineered to demonstrate mobile development proficiency—from native Android builds to seamless Cambodian transit booking with live telemetry. Open for mobile and full-stack software development engagements.
               </p>
 
               {/* Social / Contact Links */}
@@ -123,7 +123,7 @@ export default function DeveloperPortfolio() {
                   className="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#00D26A] hover:bg-[#00B85C] text-xs font-black text-black shadow-md shadow-[#00D26A]/20 transition-colors"
                 >
                   <Sparkles className="w-4 h-4" />
-                  Download APK / IPA
+                  Download APK / Web App
                 </a>
               </div>
             </div>

@@ -7,12 +7,12 @@ const faqs = [
     a: 'Tap "Download APK" to save TripZ-v1.2.0.apk to your phone. Open the downloaded file from your notifications or Files app. If prompted, toggle "Allow from this source" in Settings > Security. Then tap Install and Open.',
   },
   {
-    q: 'How can I install the .IPA package on my iPhone or iPad?',
-    a: 'You can install TripZ-v1.2.0.ipa via Sideloadly or AltStore with a standard Apple ID. Alternatively, request an instant Apple TestFlight invitation link from the developer for 1-tap installation directly from the App Store TestFlight app.',
+    q: 'How can I access TripZ on an iPhone or iPad (iOS)?',
+    a: 'You can access TripZ immediately on iOS through our responsive Web Application at trip-z-web-application.web.app. In Safari on your iPhone, tap Share > "Add to Home Screen" to install it as a standalone app on your home screen with zero download needed.',
   },
   {
-    q: 'Are the APK and IPA release files safe?',
-    a: 'Yes, 100%. The packages are signed developer builds compiled directly from clean source code with zero malware or tracking ads. You can verify the SHA-256 checksums listed in the Download Center.',
+    q: 'Is the Android APK release file safe?',
+    a: 'Yes, 100%. The APK package is a verified developer build compiled directly from clean source code with zero malware or tracking ads. You can verify the SHA-256 checksum listed in the Download Center.',
   },
   {
     q: 'Does TripZ work without an internet connection?',

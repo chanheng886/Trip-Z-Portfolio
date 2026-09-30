@@ -59,7 +59,7 @@ export default function App() {
   const handleDownloadApk = () => {
     triggerFileDownload(APP_LINKS.APK_URL, 'TripZ-v1.2.0.apk');
     setToast({
-      message: 'Downloading TripZ-v1.2.0.apk (38.4 MB)',
+      message: 'Downloading TripZ-v1.2.0.apk (61.4 MB)',
       subMessage: 'Android standalone package for testing and evaluation.',
     });
   };
@@ -67,8 +67,8 @@ export default function App() {
   const handleDownloadIpa = () => {
     triggerFileDownload(APP_LINKS.IPA_URL, 'TripZ-v1.2.0.ipa');
     setToast({
-      message: 'Downloading TripZ-v1.2.0.ipa (42.1 MB)',
-      subMessage: 'iOS package ready for AltStore, Sideloadly or TestFlight.',
+      message: 'Downloading TripZ-v1.2.0.ipa (10.0 MB)',
+      subMessage: 'iOS mobile package ready for Sideloadly or AltStore.',
     });
   };
 

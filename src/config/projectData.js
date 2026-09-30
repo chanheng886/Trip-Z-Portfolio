@@ -86,8 +86,8 @@ export const APP_FEATURES = [
     icon: "Route",
   },
   {
-    title: "Mobile Experience",
-    description: "Designed for Android and iOS users with native performance and offline tickets.",
+    title: "Mobile & Web Experience",
+    description: "Designed for Android, iOS, and Web users with native performance and offline tickets.",
     category: "Cross-Platform",
     icon: "Smartphone",
   },
@@ -247,7 +247,7 @@ export const TEAM_MEMBERS = [
     isLeader: true,
     responsibility: "Project coordination, architecture design, Spring Boot backend, analyze database, and mentor reporting.",
     github: "https://github.com/chanheng886",
-    linkedin: "https://linkedin.com",
+    linkedin: "https://www.linkedin.com/in/chan-heng-545266410/?isSelfProfile=true",
     avatar: member1img,
   },
   {
@@ -287,7 +287,7 @@ export const TEAM_MEMBERS = [
     isLeader: false,
     responsibility: "UI design, Mobile & design system, prototype, Figma wireframe.",
     github: "https://github.com",
-    linkedin: "https://linkedin.com",
+    linkedin: "https://www.linkedin.com/in/an-rathtaknangjeany-186539423?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
     avatar: member5img,
   },
   {

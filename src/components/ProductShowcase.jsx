@@ -129,7 +129,7 @@ export default function ProductShowcase() {
                   href="#downloads"
                   className="inline-flex items-center gap-2 text-xs font-bold text-[#19D66B] hover:underline"
                 >
-                  <span>Download Android APK & iOS IPA in Download Section</span>
+                  <span>Download Android APK or Explore the Web App in Download Section</span>
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </div>

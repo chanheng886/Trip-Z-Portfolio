@@ -23,25 +23,8 @@ Features in this build:
 
 (This is a verified portfolio test distribution build)`;
 
-const ipaReadme = `TripZ iOS App Bundle (IPA) - Version 1.2.0 (Build 108)
-Bundle Identifier: com.tripz.mobility.ios
-Minimum iOS: iOS 15.0+
-Supported Devices: iPhone, iPad
-
-Features in this build:
-- Apple Pay & FaceID quick checkout
-- Live Activities on Dynamic Island for boarding countdown
-- Offline Apple Wallet Ticket Pass support
-- Turn-by-turn walking directions to bus terminals
-
-(This is an Ad-Hoc / Developer Enterprise signed build for portfolio review)`;
-
-fs.writeFileSync(path.join(downloadsDir, 'TripZ-v1.2.0.apk'), Buffer.from(apkReadme));
-fs.writeFileSync(path.join(downloadsDir, 'TripZ-v1.2.0.ipa'), Buffer.from(ipaReadme));
-
 const checksums = `SHA-256 Checksums for TripZ v1.2.0 Release Builds:
-e4b18c7e9f3b52d9a8c17e33a1098d6c8b91a27103e6b72a91fbc91024e1092a  TripZ-v1.2.0.apk (38.4 MB)
-f7c92b8d1a4e63b0c8d19f24b2099e7d9c82b38104e7c83b02eac92035f2103b  TripZ-v1.2.0.ipa (42.1 MB)
+0822c1d8081b530e57d46c652fbf45d661ddd087969c54c598443f39fbd13ba3  TripZ-v1.2.0.apk (61.4 MB)
 Generated on: 2026-09-30 | TripZ Release Engineering
 `;
 

@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
-import { X, Smartphone, Apple, ShieldCheck, AlertCircle } from 'lucide-react';
+import { 
+  X, Smartphone, Apple, ShieldCheck, AlertCircle, 
+  ExternalLink, Download, Laptop, CheckCircle2, Globe 
+} from 'lucide-react';
+import { APP_LINKS } from '../config/projectData';
 
 export default function InstallGuideModal({ isOpen, onClose, initialPlatform = 'android' }) {
   const [platform, setPlatform] = useState(initialPlatform);
@@ -27,7 +31,7 @@ export default function InstallGuideModal({ isOpen, onClose, initialPlatform = '
           </div>
           <div>
             <h3 className="text-xl font-bold text-[var(--text-primary)]">Installation Guide</h3>
-            <p className="text-xs sm:text-sm text-[var(--text-secondary)]">Step-by-step instructions to install TripZ on your device</p>
+            <p className="text-xs sm:text-sm text-[var(--text-secondary)]">Step-by-step instructions to install and run TripZ on your device</p>
           </div>
         </div>
 
@@ -53,7 +57,7 @@ export default function InstallGuideModal({ isOpen, onClose, initialPlatform = '
             }`}
           >
             <Apple className="w-4 h-4" />
-            iOS (.IPA)
+            iOS (.IPA Mobile)
           </button>
         </div>
 
@@ -67,7 +71,7 @@ export default function InstallGuideModal({ isOpen, onClose, initialPlatform = '
               <div>
                 <h4 className="font-bold text-[var(--text-primary)] text-sm">Download the .APK file</h4>
                 <p className="text-xs text-[var(--text-secondary)] mt-1">
-                  Click the "Download APK" button to save <code className="text-[#19D66B] font-mono">TripZ-v1.2.0.apk</code> (38.4 MB) to your Android device.
+                  Click "Download APK" to save <code className="text-[#19D66B] font-mono">TripZ-v1.2.0.apk</code> (61.4 MB) to your Android device.
                 </p>
               </div>
             </div>
@@ -103,44 +107,75 @@ export default function InstallGuideModal({ isOpen, onClose, initialPlatform = '
           </div>
         )}
 
-        {/* iOS Instructions */}
+        {/* iOS Instructions: Sideloadly for iPhone */}
         {platform === 'ios' && (
           <div className="space-y-4">
+            
+            {/* Note about iOS Sideloading */}
+            <div className="p-3.5 rounded-xl bg-[var(--bg-card-secondary)] border border-[var(--border-color)] text-xs text-[var(--text-secondary)] flex items-center gap-2.5">
+              <Laptop className="w-5 h-5 text-[#19D66B] flex-shrink-0" />
+              <span>Apple requires sideloading for developer IPAs outside the App Store. Sideloadly lets any iPhone user install it for free in 3 minutes:</span>
+            </div>
+
+            {/* Step 1 */}
             <div className="p-4 rounded-2xl bg-[var(--bg-card-secondary)] border border-[var(--border-color)] flex items-start gap-3.5">
               <span className="flex-shrink-0 w-7 h-7 rounded-full bg-[var(--bg-card-elevated)] text-[var(--text-primary)] font-bold text-xs flex items-center justify-center border border-[var(--border-color)]">
                 1
               </span>
-              <div>
-                <h4 className="font-bold text-[var(--text-primary)] text-sm">Download the .IPA package</h4>
-                <p className="text-xs text-[var(--text-secondary)] mt-1">
-                  Download <code className="text-[var(--text-primary)] font-mono">TripZ-v1.2.0.ipa</code> (42.1 MB) to your Mac, PC, or iPhone Files app.
+              <div className="space-y-1.5">
+                <h4 className="font-bold text-[var(--text-primary)] text-sm">Download the IPA & Sideloadly</h4>
+                <p className="text-xs text-[var(--text-secondary)]">
+                  Save <code className="text-[#19D66B] font-mono">TripZ-v1.2.0.ipa</code> (10.0 MB) to your PC or Mac. Next, download and open the free tool <strong className="text-[var(--text-primary)]">Sideloadly</strong>.
                 </p>
+                <div className="pt-1">
+                  <a
+                    href="https://sideloadly.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs text-[#19D66B] hover:underline font-semibold"
+                  >
+                    <span>Download Sideloadly (Windows / Mac)</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                </div>
               </div>
             </div>
 
+            {/* Step 2 */}
             <div className="p-4 rounded-2xl bg-[var(--bg-card-secondary)] border border-[var(--border-color)] flex items-start gap-3.5">
               <span className="flex-shrink-0 w-7 h-7 rounded-full bg-[var(--bg-card-elevated)] text-[var(--text-primary)] font-bold text-xs flex items-center justify-center border border-[var(--border-color)]">
                 2
               </span>
               <div>
-                <h4 className="font-bold text-[var(--text-primary)] text-sm">Sideload via Sideloadly or AltStore</h4>
+                <h4 className="font-bold text-[var(--text-primary)] text-sm">Connect iPhone & Sign</h4>
                 <p className="text-xs text-[var(--text-secondary)] mt-1">
-                  Connect your iPhone via USB, open <span className="text-[var(--text-primary)] font-medium">Sideloadly</span> or <span className="text-[var(--text-primary)] font-medium">AltStore</span>, drag the TripZ IPA file in and sign with your Apple ID.
+                  Connect your iPhone to your computer via USB. Drag <code className="text-[var(--text-primary)] font-mono">TripZ-v1.2.0.ipa</code> into Sideloadly, type your personal Apple ID, and click <strong className="text-[var(--text-primary)]">Start</strong>. Sideloadly signs and installs the app onto your phone.
                 </p>
               </div>
             </div>
 
+            {/* Step 3 */}
             <div className="p-4 rounded-2xl bg-[var(--bg-card-secondary)] border border-[var(--border-color)] flex items-start gap-3.5">
               <span className="flex-shrink-0 w-7 h-7 rounded-full bg-[var(--bg-card-elevated)] text-[var(--text-primary)] font-bold text-xs flex items-center justify-center border border-[var(--border-color)]">
                 3
               </span>
               <div>
-                <h4 className="font-bold text-[var(--text-primary)] text-sm">Trust Developer Certificate</h4>
+                <h4 className="font-bold text-[var(--text-primary)] text-sm">Trust Profile & Launch</h4>
                 <p className="text-xs text-[var(--text-secondary)] mt-1">
-                  On your iPhone, go to <strong className="text-[var(--text-primary)]">Settings &gt; General &gt; VPN & Device Management</strong>, tap your profile, and select <strong className="text-[var(--text-primary)]">Trust</strong>.
+                  On your iPhone, navigate to <strong className="text-[var(--text-primary)]">Settings &gt; General &gt; VPN & Device Management</strong>, tap your Apple ID profile, and tap <strong className="text-[#19D66B]">Trust</strong>. Tap the TripZ app icon on your home screen to launch!
                 </p>
               </div>
             </div>
+
+            {/* Alternative PWA / Web option */}
+            <div className="mt-4 p-4 rounded-2xl bg-[var(--green-surface)] border border-[var(--green-border)] flex items-start gap-3 text-xs text-[var(--text-primary)]">
+              <Globe className="w-5 h-5 text-[#19D66B] flex-shrink-0 mt-0.5" />
+              <div>
+                <strong className="text-[#19D66B] block mb-0.5">Don't have a computer right now?</strong>
+                <span>You can also open <a href={APP_LINKS.WEB_APP_URL} target="_blank" rel="noopener noreferrer" className="underline font-semibold text-[#19D66B]">trip-z-web-application.web.app</a> in iPhone Safari, tap <strong>Share &gt; Add to Home Screen</strong> to run TripZ fullscreen with zero setup!</span>
+              </div>
+            </div>
+
           </div>
         )}
 

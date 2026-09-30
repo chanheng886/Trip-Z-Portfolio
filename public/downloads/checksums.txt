@@ -1,4 +1,4 @@
 SHA-256 Checksums for TripZ v1.2.0 Release Builds:
 0822c1d8081b530e57d46c652fbf45d661ddd087969c54c598443f39fbd13ba3  TripZ-v1.2.0.apk (61.4 MB)
-365b7965847d3f0e9cc65b4714503c55757139f5aea5461d574caaf0f69d9f0a  TripZ-v1.2.0.ipa (9.1 MB)
+6432dd28c6a8b97d46a4f06423117b5ff6dcdefb45952e0437f8ecdee5bca807  TripZ-v1.2.0.ipa (10.0 MB)
 Generated on: 2026-09-30 | TripZ Release Engineering

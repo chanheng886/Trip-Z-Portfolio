@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Download, Smartphone, Apple, ExternalLink } from 'lucide-react';
+import { ArrowRight, Smartphone, Apple, ExternalLink } from 'lucide-react';
 import { APP_LINKS } from '../config/projectData';
 
 export default function FinalCta({ onDownloadApk, onDownloadIpa }) {
@@ -37,16 +37,16 @@ export default function FinalCta({ onDownloadApk, onDownloadIpa }) {
             className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-[var(--bg-card-secondary)] hover:bg-[var(--bg-card-elevated)] border border-[var(--border-color)] hover:border-[#19D66B]/40 text-[var(--text-primary)] font-bold text-sm transition-all duration-300 cursor-pointer shadow-sm"
           >
             <Smartphone className="w-4 h-4 text-[#19D66B]" />
-            <span>Download APK</span>
+            <span>Download APK (v1.2.0)</span>
           </button>
 
           {/* Download IPA */}
           <button
             onClick={onDownloadIpa}
-            className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-[var(--bg-card-secondary)] hover:bg-[var(--bg-card-elevated)] border border-[var(--border-color)] text-[var(--text-primary)] font-bold text-sm transition-all duration-300 cursor-pointer shadow-sm"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-[var(--bg-card-secondary)] hover:bg-[var(--bg-card-elevated)] border border-[var(--border-color)] hover:border-[#19D66B]/40 text-[var(--text-primary)] font-bold text-sm transition-all duration-300 cursor-pointer shadow-sm"
           >
-            <Apple className="w-4 h-4 text-slate-400" />
-            <span>Download IPA</span>
+            <Apple className="w-4 h-4 text-slate-300" />
+            <span>Download IPA (v1.2.0)</span>
           </button>
         </div>
 
