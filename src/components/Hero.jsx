@@ -4,6 +4,7 @@ import {
   MapPin, Sparkles, Navigation, ShieldCheck, Bus 
 } from 'lucide-react';
 import { APP_LINKS, PROJECT_INFO } from '../config/projectData';
+import BusGraphic from './BusGraphic';
 
 export default function Hero({ onDownloadApk, onDownloadIpa }) {
   return (
@@ -145,7 +146,7 @@ export default function Hero({ onDownloadApk, onDownloadIpa }) {
                   </div>
                   <div>
                     <h3 className="text-xs font-bold text-[var(--text-primary)]">TripZ Express Transit</h3>
-                    <p className="text-[10px] text-[var(--text-secondary)]">Phnom Penh ➔ Siem Reap (2.5h)</p>
+                    <p className="text-[10px] text-[var(--text-secondary)]">Phnom Penh ➔ Siem Reap (2.5h Expressway)</p>
                   </div>
                 </div>
                 <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-[var(--green-surface)] text-[#19D66B] border border-[var(--green-border)]">
@@ -153,64 +154,21 @@ export default function Hero({ onDownloadApk, onDownloadIpa }) {
                 </span>
               </div>
 
-              {/* Modern Bus Graphic Canvas */}
-              <div className="relative py-6 my-2 flex items-center justify-center">
-                <svg className="w-full h-44" viewBox="0 0 400 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <linearGradient id="busBodyGrad" x1="0" y1="0" x2="400" y2="180" gradientUnits="userSpaceOnUse">
-                      <stop offset="0%" stopColor="#222630" />
-                      <stop offset="100%" stopColor="#1C202A" />
-                    </linearGradient>
-                    <linearGradient id="neonStripe" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
-                      <stop offset="0%" stopColor="#19D66B" />
-                      <stop offset="100%" stopColor="#22C55E" />
-                    </linearGradient>
-                  </defs>
+              {/* Modern VIP Luxury Express Coach Graphic Canvas */}
+              <div className="relative py-3 my-0.5 flex items-center justify-center">
+                <BusGraphic />
+              </div>
 
-                  {/* Ground Shadow */}
-                  <ellipse cx="200" cy="165" rx="170" ry="10" fill="#000" opacity="0.25" />
-                  
-                  {/* Bus Aerodynamic Body */}
-                  <path d="M 40 140 L 40 60 Q 45 30, 90 25 L 330 25 Q 365 28, 375 70 L 375 140 Z" fill="url(#busBodyGrad)" stroke="#303542" strokeWidth="2" />
-                  
-                  {/* Neon TripZ Accent Stripe */}
-                  <path d="M 40 115 L 375 115" stroke="url(#neonStripe)" strokeWidth="4" />
-                  <path d="M 40 120 L 375 120" stroke="#19D66B" strokeWidth="1" opacity="0.4" />
-
-                  {/* Windows */}
-                  <rect x="65" y="40" width="45" height="35" rx="4" fill="#0c0e14" stroke="#303542" />
-                  <rect x="120" y="40" width="45" height="35" rx="4" fill="#0c0e14" stroke="#303542" />
-                  <rect x="175" y="40" width="45" height="35" rx="4" fill="#0c0e14" stroke="#303542" />
-                  <rect x="230" y="40" width="45" height="35" rx="4" fill="#0c0e14" stroke="#303542" />
-                  <rect x="285" y="40" width="45" height="35" rx="4" fill="#0c0e14" stroke="#303542" />
-
-                  {/* Driver Cockpit Curved Windshield */}
-                  <path d="M 335 40 L 360 40 Q 368 45, 370 75 L 335 75 Z" fill="#0c0e14" stroke="#303542" />
-                  
-                  {/* Headlights */}
-                  <circle cx="370" cy="125" r="4" fill="#19D66B" />
-                  <path d="M 370 125 L 395 120 L 395 130 Z" fill="#19D66B" opacity="0.2" />
-
-                  {/* Tail light */}
-                  <rect x="40" y="105" width="4" height="15" rx="1" fill="#EF4444" />
-
-                  {/* TripZ Branding on Bus Side */}
-                  <text x="70" y="102" fill="#F5F7F6" fontFamily="sans-serif" fontSize="13" fontWeight="900" letterSpacing="1">
-                    TRIP<tspan fill="#19D66B">Z</tspan>
-                  </text>
-                  <text x="122" y="102" fill="#AAB3BE" fontFamily="sans-serif" fontSize="9" fontWeight="600">
-                    EXPRESS COURIER
-                  </text>
-
-                  {/* Wheels */}
-                  <circle cx="100" cy="145" r="22" fill="#121214" stroke="#303542" strokeWidth="3" />
-                  <circle cx="100" cy="145" r="10" fill="#222630" />
-                  <circle cx="100" cy="145" r="4" fill="#19D66B" />
-
-                  <circle cx="310" cy="145" r="22" fill="#121214" stroke="#303542" strokeWidth="3" />
-                  <circle cx="310" cy="145" r="10" fill="#222630" />
-                  <circle cx="310" cy="145" r="4" fill="#19D66B" />
-                </svg>
+              {/* Fleet Feature Badges */}
+              <div className="flex items-center justify-center gap-2 text-[11px] font-medium text-[var(--text-muted)] py-1">
+                <span className="flex items-center gap-1.5 text-[var(--text-secondary)]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#19D66B] animate-pulse" />
+                  VIP Recliner Berths
+                </span>
+                <span className="text-[var(--border-color)]">•</span>
+                <span>Expressway 120 km/h</span>
+                <span className="text-[var(--border-color)]">•</span>
+                <span>Live GPS</span>
               </div>
 
               {/* Status Pills */}
